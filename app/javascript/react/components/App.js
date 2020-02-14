@@ -1,14 +1,13 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import DestinationList from './destinations/DestinationList'
+import TreklistContainer from './destinations/TreklistContainer'
 
 
 export const App = (props) => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path='/' component={DestinationList} />
-          <Route exact path='/destinations' component={DestinationList} />
+        <Route exact path='/' component={TreklistContainer} />
       </Switch>
     </BrowserRouter>
 
