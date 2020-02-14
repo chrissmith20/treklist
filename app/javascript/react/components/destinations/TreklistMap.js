@@ -6,12 +6,8 @@ const TreklistMap = withScriptjs(withGoogleMap((props) => {
   return(
     <>
     <div>
-    <DestinationList
-    />
-    </div>
-    <div>
       <GoogleMap
-        defaultZoom={8}
+        defaultZoom={5}
         defaultCenter={{ lat: -34.397, lng: 150.644 }}
       >
       {props.isMarkerShown && <Marker position={{ lat: -34.397, lng: 150.644 }} />}
