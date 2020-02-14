@@ -7,7 +7,7 @@ export const App = (props) => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path='/' component={TreklistContainer} />
+          <Route exact path='/' component={TreklistContainer} />
       </Switch>
     </BrowserRouter>
 
