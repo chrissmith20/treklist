@@ -7,4 +7,8 @@ class Api::V1::DestinationsController < ApiController
   def show
     render json: Destination.find(params[:id])
   end
+
+  def create
+    
+  end
 end
