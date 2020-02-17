@@ -1,7 +1,14 @@
 require "rails_helper"
 
 RSpec.describe Api::V1::DestinationsController, type: :controller do
+  let!(:first_user) { User.create(
+  username: "travelbobby",
+  email: "bobby@example.com",
+  password: "password"
+  ) }
+
   let!(:first_destination) { Destination.create(
+    user: first_user,
     title: "The Big Apple",
     description: "Want to see times square and all it's glory"
   ) }
@@ -31,8 +38,8 @@ RSpec.describe Api::V1::DestinationsController, type: :controller do
 
       expect(response.status).to eq 200
       expect(response.content_type).to eq("application/json")
-      expect(returned_json.length).to eq 5
-      
+      expect(returned_json.length).to eq 4
+
       expect(returned_json["title"]).to eq "The Big Apple"
       expect(returned_json["description"]).to eq "Want to see times square and all it's glory"
     end
