@@ -1,12 +1,64 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 
-import DestinationList from './DestinationList'
+import DestinationTile from './DestinationTile'
 import DestinationForm from './DestinationForm'
 import TreklistMap from './TreklistMap'
 
 
 const TreklistContainer = () => {
+  const [destinations, setDestination] = useState([])
+
+  useEffect(() => {
+      fetch(`/api/v1/destinations.json`)
+      .then(response => {
+        if (response.ok) {
+          return response
+        } else {
+          let errorMessage = `${response.status} (${response.statusText})`,
+            error = new Error(errorMessage);
+            throw(error)
+        }
+      })
+      .then(response => response.json())
+      .then(response => {
+        setDestination(response)
+      })
+      .catch(error => console.error(`Error in fetch: ${error.message}`))
+    }, [])
+
+    const destinationTiles = destinations.map(destination => {
+      return(
+        <DestinationTile
+          key={destination.id}
+          title={destination.title}
+          description={destination.description}
+        />
+      )
+    })
+
+    const addNewDestination = formPayload => {
+      fetch(`/api/v1/destinations`, {
+        credentials: 'same-origin',
+        method: 'POST',
+        body: JSON.stringify(formPayload)
+      })
+      .then(response => {
+        if (response.ok) {
+          return response;
+        } else {
+          let errorMessage = `${response.status} (${response.statusText})`,
+          error = new Error(errorMessage);
+          throw(error);
+        }
+      })
+      .then(response => response.json())
+      .then(submitDestination => {
+        debugger
+        setDestination([...destinations, submitDestination])
+      })
+    }
+
   return(
     <>
     <TreklistMap
@@ -17,9 +69,9 @@ const TreklistContainer = () => {
       mapElement={<div style={{ height: `800px`, width: `100%`, float: `right` }} />}
     />
 
-  <DestinationList  />
+  {destinationTiles}
 
-  <DestinationForm />
+  <DestinationForm addNewDestination={addNewDestination} />
   </>
   )
 }

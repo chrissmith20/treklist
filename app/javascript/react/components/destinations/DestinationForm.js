@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 
 
 const DestinationForm = (props) => {
@@ -12,13 +12,20 @@ const DestinationForm = (props) => {
     description: ''
   })
 
+  const handleSubmit = event => {
+    event.preventDefault();
+    debugger
+    props.addNewDestination(newDestination)
+    // let formPayload = newDestination
+    // props.onSubmit(formPayload)
+  }
+
   const handleChange = event => {
     setNewDestination({
       ...newDestination,
       [event.currentTarget.id]: event.currentTarget.value
     })
   }
-
 
   const clearForm = () => {
     set(defaultForm);
@@ -27,7 +34,7 @@ const DestinationForm = (props) => {
 
   return(
     <>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>
           Title
           <input
