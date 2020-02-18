@@ -38,10 +38,14 @@ const TreklistContainer = () => {
     })
 
     const addNewDestination = formPayload => {
-      fetch(`/api/v1/destinations`, {
+      fetch(`/api/v1/destinations/`, {
         credentials: 'same-origin',
         method: 'POST',
-        body: JSON.stringify(formPayload)
+        body: JSON.stringify(formPayload),
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json'
+        }
       })
       .then(response => {
         if (response.ok) {
@@ -54,7 +58,6 @@ const TreklistContainer = () => {
       })
       .then(response => response.json())
       .then(submitDestination => {
-        debugger
         setDestination([...destinations, submitDestination])
       })
     }

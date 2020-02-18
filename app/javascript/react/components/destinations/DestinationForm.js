@@ -14,10 +14,8 @@ const DestinationForm = (props) => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    debugger
     props.addNewDestination(newDestination)
-    // let formPayload = newDestination
-    // props.onSubmit(formPayload)
+    setNewDestination(defaultForm)
   }
 
   const handleChange = event => {
@@ -28,7 +26,7 @@ const DestinationForm = (props) => {
   }
 
   const clearForm = () => {
-    set(defaultForm);
+    setNewDestination(defaultForm);
   };
 
 
