@@ -7,7 +7,7 @@ import TreklistMap from './TreklistMap'
 
 
 const TreklistContainer = () => {
-  const [destinations, setDestination] = useState([])
+  const [destinations, setDestinations] = useState([])
 
   useEffect(() => {
       fetch(`/api/v1/destinations.json`)
@@ -22,7 +22,7 @@ const TreklistContainer = () => {
       })
       .then(response => response.json())
       .then(response => {
-        setDestination(response)
+        setDestinations(response)
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`))
     }, [])
@@ -61,21 +61,24 @@ const TreklistContainer = () => {
         setDestination([...destinations, submitDestination])
       })
     }
+    let loadingElement = <div style={{ height: `100px` }} />
 
   return(
     <>
-    <TreklistMap
-      isMarkerShown
-      googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyArHw2cFpooL6LryK0VR1A83O0v5hSeBIk&v=3.exp&libraries=geometry,drawing,places"
-      loadingElement={<div style={{ height: `100px` }} />}
-      containerElement={<div style={{ height: `100px` }} />}
-      mapElement={<div style={{ height: `800px`, width: `100%`, float: `right` }} />}
-    />
+      <TreklistMap
+        isMarkerShown
+        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyArHw2cFpooL6LryK0VR1A83O0v5hSeBIk&v=3.exp&libraries=geometry,drawing,places"
+        loadingElement={loadingElement}
+        containerElement={<div style={{ height: `100px` }} />}
+        mapElement={<div style={{ height: `800px`, width: `100%`, float: `right` }} />}
+        destinations={destinations}
+      />
 
-  {destinationTiles}
+      {destinationTiles}
 
-  <DestinationForm addNewDestination={addNewDestination} />
-  </>
+      <DestinationForm addNewDestination={addNewDestination}
+      />
+    </>
   )
 }
 
