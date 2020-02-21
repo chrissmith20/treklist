@@ -4,32 +4,33 @@ import { SearchBox } from "react-google-maps/lib/components/places/SearchBox"
 
 const TreklistMap = withScriptjs(withGoogleMap((props) => {
 
-  const userMarkers = props.destinations.map((destination) => {
+  // const userMarkers = props.destinations.map((destination) => {
+  //
+  //   return(
+  //     <Marker position={{ lat: destination.lat, lng: destination.long }} />
+  //   )
+  // })
+  // //       {userMarkers}
+  //
+  // const onPlacesChanged = () => {
+  //   const places = refs.searchBox.getPlaces();
+  //   const bounds = new google.maps.LatLngBounds();
+  //
+  //   places.forEach(place => {
+  //     if (place.geometry.viewport) {
+  //       bounds.union(place.geometry.viewport)
+  //     } else {
+  //       bounds.extend(place.geometry.location)
+  //     }
+  //   });
+  // }
 
-    return(
-      <Marker position={{ lat: destination.lat, lng: destination.long }} />
-    )
-  })
-  //       {userMarkers}
-
-  const onPlacesChanged = () => {
-    const places = refs.searchBox.getPlaces();
-    const bounds = new google.maps.LatLngBounds();
-
-    places.forEach(place => {
-      if (place.geometry.viewport) {
-        bounds.union(place.geometry.viewport)
-      } else {
-        bounds.extend(place.geometry.location)
-      }
-    });
-  }
-
+  // onPlacesChanged={onPlacesChanged}
   return(
     <>
     <div>
       <GoogleMap defaultZoom={5} defaultCenter={{ lat: 42.3601, lng: -71.0589 }}>
-        <Marker position={{ lat: 42.3602, lng: -71.0589 }} />
+        <Marker position={{ lat: 42.3602, lng: -71.089 }} />
         <Marker position={{ lat: 42.3601, lng: -71.0589  }} />
       </GoogleMap>
 
@@ -37,7 +38,6 @@ const TreklistMap = withScriptjs(withGoogleMap((props) => {
         ref={props.onSearchBoxMounted}
         bounds={props.bounds}
         controlPosition={google.maps.ControlPosition.TOP_LEFT}
-        onPlacesChanged={onPlacesChanged}
       >
         <input
           type="text"

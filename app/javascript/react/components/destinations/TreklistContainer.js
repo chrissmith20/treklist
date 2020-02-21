@@ -8,6 +8,7 @@ import TreklistMap from './TreklistMap'
 
 const TreklistContainer = () => {
   const [destinations, setDestinations] = useState([])
+  // fetch google api result
 
   useEffect(() => {
       fetch(`/api/v1/destinations.json`)
@@ -26,6 +27,7 @@ const TreklistContainer = () => {
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`))
     }, [])
+
 
     const destinationTiles = destinations.map(destination => {
       return(
@@ -58,7 +60,7 @@ const TreklistContainer = () => {
       })
       .then(response => response.json())
       .then(submitDestination => {
-        setDestination([...destinations, submitDestination])
+        setDestinations([...destinations, submitDestination])
       })
     }
     let loadingElement = <div style={{ height: `100px` }} />

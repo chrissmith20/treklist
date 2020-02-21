@@ -4,12 +4,12 @@ import React, { useState } from 'react'
 const DestinationForm = (props) => {
   const defaultForm = {
     title: '',
-    description: ''
+    description: '',
   }
 
   const [newDestination, setNewDestination] = useState({
     title: '',
-    description: ''
+    description: '',
   })
 
   const handleSubmit = event => {
