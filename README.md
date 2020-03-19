@@ -1,26 +1,42 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
 [![Codeship Status for chrissmith20/treklist](https://app.codeship.com/projects/75400d90-2f0b-0138-53fa-3efebd8540f1/status?branch=master)](https://app.codeship.com/projects/385007)
 
-* Ruby version - 2.6.5
+# Travel List App
 
-* System dependencies
+-Title: Treklist
 
-* Configuration
+Description:
 
-* Database creation
+-Authors:<br />
+-Chris Smith <br />
 
-* Database initialization
+Heroku Link
+https://treklist.herokuapp.com/
 
-* How to run the test suite
+# Technologies
 
-* Services (job queues, cache servers, search engines, etc.)
+-Ruby - 2.6.3
+-Rails - 5.2.3
+-React - 16.8.0
+-Foundation-Rails - 6.5.3.0
 
-* Deployment instructions
+# Setup
 
-* ...
+To set up this app, download the repo and run the following commands in your terminal in exact order:
+
+-yarn install<br />
+-bundle exec bundle install<br />
+-bundle exec rake db:create<br />
+-bundle exec rake db:migrate && bundle exec rake db:rollback && bundle exec rake db:migrate<br />
+-bundle exec rake db:seed<br />
+-yarn start<br />
+-new tab- bundle exec rails s<br />
+-Navigate your browser to localhost:3000
+
+# Testing
+
+To run tests, run these files in a separate terminal tab:<br />
+-bundle exec rake db:test:prepare<br />
+-bundle exec rspec<br />
+-yarn run test
