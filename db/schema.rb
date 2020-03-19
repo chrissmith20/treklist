@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(version: 2020_02_12_171001) do
   create_table "destinations", force: :cascade do |t|
     t.string "title", null: false
     t.string "description", null: false
-    t.integer "latitude", null: false
-    t.integer "longitude", null: false
+    t.float "latitude", null: false
+    t.float "longitude", null: false
     t.string "google_places_place_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false

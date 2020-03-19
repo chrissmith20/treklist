@@ -18,7 +18,7 @@ class Api::V1::DestinationsController < ApiController
     destination.longitude = location.lng
     destination.google_places_place_id = location.id
 
-    # binding.pry
+    binding.pry
 
     # move google places api query to here and use the title from destination_params in your search
     # using the first location result from this query, take the google places id, title, lat and long, and add to the new destination you are creating

@@ -74,11 +74,14 @@ const TreklistContainer = () => {
         containerElement={<div style={{ height: `100px` }} />}
         mapElement={<div style={{ height: `800px`, width: `100%`, float: `right` }} />}
         destinations={destinations}
+        addNewDestination={addNewDestination}
       />
 
       {destinationTiles}
 
-      <DestinationForm addNewDestination={addNewDestination}
+      <DestinationForm
+      destinations={destinations}
+      addNewDestination={addNewDestination}
       />
     </>
   )

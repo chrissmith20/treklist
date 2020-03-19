@@ -3,14 +3,19 @@ import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-map
 import { SearchBox } from "react-google-maps/lib/components/places/SearchBox"
 
 const TreklistMap = withScriptjs(withGoogleMap((props) => {
+  // debugger
+
 
   // const userMarkers = props.destinations.map((destination) => {
-  //
+  //   let trekMarker = <Marker position={{ lat: destination.latitude, lng: destination.longitude }} />
+  // //
   //   return(
-  //     <Marker position={{ lat: destination.lat, lng: destination.long }} />
+  //     <GoogleMap>
+  //       {trekMarker}
+  //     </GoogleMap>
   //   )
   // })
-  // //       {userMarkers}
+
   //
   // const onPlacesChanged = () => {
   //   const places = refs.searchBox.getPlaces();
@@ -23,15 +28,16 @@ const TreklistMap = withScriptjs(withGoogleMap((props) => {
   //       bounds.extend(place.geometry.location)
   //     }
   //   });
-  // }
+
 
   // onPlacesChanged={onPlacesChanged}
   return(
     <>
     <div>
       <GoogleMap defaultZoom={5} defaultCenter={{ lat: 42.3601, lng: -71.0589 }}>
-        <Marker position={{ lat: 42.3602, lng: -71.089 }} />
+
         <Marker position={{ lat: 42.3601, lng: -71.0589  }} />
+
       </GoogleMap>
 
       <SearchBox
