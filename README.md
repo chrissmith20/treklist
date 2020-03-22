@@ -4,8 +4,7 @@
 
 # Travel List App
 
-# Title:
--Treklist
+# Title: Treklist
 
 # Description:
 This application is designed to help a user keep a list of locations from around the world that they would like to one day travel to.
@@ -14,10 +13,10 @@ Once they complete this step, they are redirected to the home page of the app wh
 A user can then type in any location in the title field and it will return the first result in the GooglePlaces API. This result is then persisted onto the list once the user types a description and selects submit.
 
 # Dream Features:
--Continue adding style via HTML and CSS
--Add an edit and delete function to allow users to manage the list more efficiently
--Persist a marker on the map once a user has entered a location
--Create a checkmark box next to each location on the list for the user to select locations they've visited
+-Continue adding style via HTML and CSS <br />
+-Add an edit and delete function to allow users to manage the list more efficiently <br />
+-Persist a marker on the map once a user has entered a location <br />
+-Create a checkmark box next to each location on the list for the user to select locations they've visited <br />
 -Allow user to separate list in categories for organization
 
 # Authors:<br />
@@ -28,10 +27,10 @@ https://treklist.herokuapp.com/
 
 # Technologies
 
--Ruby - 2.6.3
--Rails - 5.2.3
--React - 16.8.0
--Foundation-Rails - 6.5.3.0
+-Ruby - 2.6.3 <br />
+-Rails - 5.2.3 <br />
+-React - 16.8.0 <br />
+-Foundation-Rails - 6.5.3.0 <br />
 
 # Setup
 
