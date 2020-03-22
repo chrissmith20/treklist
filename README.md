@@ -4,16 +4,26 @@
 
 # Travel List App
 
--Title: Treklist
+# Title:
+-Treklist
 
-Description:
+# Description:
+This application is designed to help a user keep a list of locations from around the world that they would like to one day travel to.
+The opening page requires a log in or sign up to ensure users list belongs only to them.
+Once they complete this step, they are redirected to the home page of the app which shows an interactive GoogleMap and a form showing a title and description.
+A user can then type in any location in the title field and it will return the first result in the GooglePlaces API. This result is then persisted onto the list once the user types a description and selects submit.
 
-Dream Features: 
+# Dream Features:
+-Continue adding style via HTML and CSS
+-Add an edit and delete function to allow users to manage the list more efficiently
+-Persist a marker on the map once a user has entered a location
+-Create a checkmark box next to each location on the list for the user to select locations they've visited
+-Allow user to separate list in categories for organization
 
--Authors:<br />
+# Authors:<br />
 -Chris Smith <br />
 
-Heroku Link
+# Heroku Link:
 https://treklist.herokuapp.com/
 
 # Technologies
