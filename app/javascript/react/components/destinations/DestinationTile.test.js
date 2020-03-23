@@ -13,14 +13,14 @@ describe('DescriptionTile', () => {
 
     wrapper = mount(
         <DestinationTile
-        title= "Grand Canyon"
+        location= "Grand Canyon"
         description= "This is top five on my list"
         />
     );
   });
 
-  it('should render an h1 tag with the title of the destination', () => {
-    expect(wrapper.find('#title').text()).toBe('Grand Canyon');
+  it('should render an h1 tag with the location of the destination', () => {
+    expect(wrapper.find('#location').text()).toBe('Grand Canyon');
   });
 
   it('should render an h2 tag with the description of the destination', () => {

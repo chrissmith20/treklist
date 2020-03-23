@@ -1,6 +1,6 @@
 class Destination < ApplicationRecord
 
-  validates :title, presence: true
+  validates :location, presence: true
   validates :description, presence: true
 
   belongs_to :user

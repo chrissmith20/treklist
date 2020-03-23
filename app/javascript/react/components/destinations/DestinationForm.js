@@ -3,13 +3,13 @@ import React, { useState } from 'react'
 
 const DestinationForm = (props) => {
   const defaultForm = {
-    title: '',
-    description: ''
+    location: '',
+    description: '',
   }
 
   const [newDestination, setNewDestination] = useState({
-    title: '',
-    description: ''
+    location: '',
+    description: '',
   })
 
   const handleSubmit = event => {
@@ -34,12 +34,12 @@ const DestinationForm = (props) => {
     <>
       <form onSubmit={handleSubmit}>
         <label>
-          Title
+          Location
           <input
-            id='title'
-            title='title'
+            id='location'
+            location='location'
             type='text'
-            value={newDestination.title}
+            value={newDestination.location}
             onChange={handleChange}
             />
         </label>
@@ -48,7 +48,7 @@ const DestinationForm = (props) => {
           Description
           <input
             id='description'
-            title='description'
+            description='description'
             type='text'
             value={newDestination.description}
             onChange={handleChange}
