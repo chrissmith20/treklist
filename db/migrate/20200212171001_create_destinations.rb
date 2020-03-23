@@ -1,7 +1,7 @@
 class CreateDestinations < ActiveRecord::Migration[5.2]
   def change
     create_table :destinations do |t|
-      t.string :title, null: false
+      t.string :location, null: false
       t.string :description, null: false
       t.float :latitude, null: false
       t.float :longitude, null: false

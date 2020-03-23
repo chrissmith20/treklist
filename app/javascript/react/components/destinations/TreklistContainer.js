@@ -8,7 +8,6 @@ import TreklistMap from './TreklistMap'
 
 const TreklistContainer = () => {
   const [destinations, setDestinations] = useState([])
-  // fetch google api result
 
   useEffect(() => {
       fetch(`/api/v1/destinations.json`)
@@ -33,7 +32,7 @@ const TreklistContainer = () => {
       return(
         <DestinationTile
           key={destination.id}
-          title={destination.title}
+          location={destination.location}
           description={destination.description}
         />
       )
