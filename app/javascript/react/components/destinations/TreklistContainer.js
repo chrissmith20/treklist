@@ -61,6 +61,7 @@ const TreklistContainer = () => {
       .then(submitDestination => {
         setDestinations([...destinations, submitDestination])
       })
+      .catch(error => console.error(`Error in fetch: ${error.message}`))
     }
     let loadingElement = <div style={{ height: `100px` }} />
 
