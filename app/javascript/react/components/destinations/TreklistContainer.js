@@ -10,7 +10,7 @@ const TreklistContainer = () => {
   const [destinations, setDestinations] = useState([])
 
   useEffect(() => {
-      fetch(`/api/v1/destinations.json`)
+      fetch(`/api/v1/destinations`)
       .then(response => {
         if (response.ok) {
           return response
@@ -39,7 +39,7 @@ const TreklistContainer = () => {
     })
 
     const addNewDestination = formPayload => {
-      fetch(`/api/v1/destinations/`, {
+      fetch(`/api/v1/destinations`, {
         credentials: 'same-origin',
         method: 'POST',
         body: JSON.stringify(formPayload),
