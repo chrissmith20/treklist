@@ -6,6 +6,7 @@
 
 # Title: Treklist
 
+
 # Description:
 This application is designed to help a user keep a list of locations from around the world that they would like to one day travel to.
 The opening page requires a log in or sign up to ensure users list belongs only to them.
@@ -51,3 +52,5 @@ To run tests, run these files in a separate terminal tab:<br />
 -bundle exec rake db:test:prepare<br />
 -bundle exec rspec<br />
 -yarn run test
+
+#IMPORTANT: Application is undergoing consistent maintenance. Thank you for your patience.
