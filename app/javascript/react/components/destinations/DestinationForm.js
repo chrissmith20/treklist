@@ -32,8 +32,8 @@ const DestinationForm = (props) => {
 
   return(
     <>
-      <form onSubmit={handleSubmit}>
-        <label>
+      <form className='form' onSubmit={handleSubmit}>
+        <label className='title'>
           Location
           <input
             id='location'
