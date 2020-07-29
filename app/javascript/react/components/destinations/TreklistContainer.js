@@ -63,7 +63,9 @@ const TreklistContainer = () => {
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`))
     }
-    let loadingElement = <div style={{ height: `100px` }} />
+    let loadingElement = <div style={{ height: `75px` }} />
+    let containerElement = <div style={{ height: `50px` }} />
+    let mapElement = <div style={{ height: `800px`, width: `100%`, float: `right` }} />
 
   return(
     <>
@@ -71,8 +73,8 @@ const TreklistContainer = () => {
         isMarkerShown
         googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyArHw2cFpooL6LryK0VR1A83O0v5hSeBIk&v=3.exp&libraries=geometry,drawing,places"
         loadingElement={loadingElement}
-        containerElement={<div style={{ height: `100px` }} />}
-        mapElement={<div style={{ height: `800px`, width: `100%`, float: `right` }} />}
+        containerElement={containerElement}
+        mapElement={mapElement}
         destinations={destinations}
         addNewDestination={addNewDestination}
       />
