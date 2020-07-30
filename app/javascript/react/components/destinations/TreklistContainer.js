@@ -69,15 +69,15 @@ const TreklistContainer = () => {
 
   return(
     <>
-      <TreklistMap
-        isMarkerShown
-        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyArHw2cFpooL6LryK0VR1A83O0v5hSeBIk&v=3.exp&libraries=geometry,drawing,places"
-        loadingElement={loadingElement}
-        containerElement={containerElement}
-        mapElement={mapElement}
-        destinations={destinations}
-        addNewDestination={addNewDestination}
-      />
+        <TreklistMap
+          isMarkerShown
+          googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyArHw2cFpooL6LryK0VR1A83O0v5hSeBIk&v=3.exp&libraries=geometry,drawing,places"
+          loadingElement={loadingElement}
+          containerElement={containerElement}
+          mapElement={mapElement}
+          destinations={destinations}
+          addNewDestination={addNewDestination}
+        />
 
       {destinationTiles}
 
