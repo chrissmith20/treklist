@@ -5,26 +5,21 @@ $cream: rgba(244, 247, 255, 1);
 $black: rgba(4, 15, 22, 1);
 
 #app {
+  border-color: $custom-blue;
   margin-bottom: 50px;
   margin-left: 50px;
   margin-right: 50px;
   margin-top: 50px;
-  border-radius: 25px;
-  border-top: 25px;
-  border-bottom: 25px;
-  border-left: 25px;
-  border-right: 25px;
 }
 
 #app.text {
   margin-bottom: 50px;
   margin-left: 50px;
   margin-right: 50px;
-
   padding-top: 50px;
 }
 
-#app.mapp {
+#app.user-input {
   margin-bottom: 50px;
   margin-left: 50px;
   margin-right: 50px;

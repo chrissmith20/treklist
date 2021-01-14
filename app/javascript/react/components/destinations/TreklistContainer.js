@@ -63,6 +63,7 @@ const TreklistContainer = () => {
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`))
     }
+    
     let loadingElement = <div style={{ height: `75px` }} />
     let containerElement = <div style={{ height: `50px` }} />
     let mapElement = <div style={{ height: `800px`, width: `100%`, float: `right` }} />

@@ -32,36 +32,38 @@ const DestinationForm = (props) => {
 
   return(
     <>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Location
-          <input
-            id='location'
-            location='location'
-            type='text'
-            value={newDestination.location}
-            onChange={handleChange}
-            />
-        </label>
+      <div className="user-input">
+        <form onSubmit={handleSubmit}>
+          <label>
+            Location
+            <input
+              id='location'
+              location='location'
+              type='text'
+              value={newDestination.location}
+              onChange={handleChange}
+              />
+          </label>
 
-        <label>
-          Description
-          <input
-            id='description'
-            description='description'
-            type='text'
-            value={newDestination.description}
-            onChange={handleChange}
-            />
-        </label>
+          <label>
+            Description
+            <input
+              id='description'
+              description='description'
+              type='text'
+              value={newDestination.description}
+              onChange={handleChange}
+              />
+          </label>
 
-        <div className='button-group'>
-          <button onClick={clearForm} className='button'>Clear
-          </button>
+          <div className='button-group'>
+            <button onClick={clearForm} className='button'>Clear
+            </button>
             <input type='submit' className='button' value='Treklist It'
-            />
-        </div>
-      </form>
+              />
+          </div>
+        </form>
+      </div>
     </>
   )
 }
