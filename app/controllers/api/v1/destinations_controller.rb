@@ -11,7 +11,7 @@ class Api::V1::DestinationsController < ApiController
   def create
     destination = Destination.new(destination_params)
 
-    @client = GooglePlaces::Client.new('AIzaSyArHw2cFpooL6LryK0VR1A83O0v5hSeBIk')
+    @client = GooglePlaces::Client.new('AIzaSyC-tgjG8jNaVaIhU3xp4sJSgr4GKdJf6Zc')
     place = @client.spots_by_query(destination.location).first
     destination.location = place.name
     destination.latitude = place.lat
