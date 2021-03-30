@@ -25,5 +25,6 @@
  }
 
  .top-bar {
-   background-image: !important;
+   background-color: inherit;
+
  }
